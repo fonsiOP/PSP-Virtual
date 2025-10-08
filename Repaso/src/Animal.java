@@ -1,9 +1,9 @@
-
-public class Animal {
+public abstract class Animal {
 	
-	String nombre;
-	int edad;
-	double peso;
+
+	protected String nombre;
+	protected int edad;
+	protected double peso;
 	
 	
 	Animal(String n, int e, double p){
@@ -12,8 +12,35 @@ public class Animal {
 		this.edad=e;
 	}
 	
-	void mostrarDatos() {
-		System.out.println("El animal "+ this.nombre +" tiene "+ this.edad + " años y pesa " + this.peso + " kg");
+	public abstract void hacerSonido();
+	
+	public String toString() {
+		return "Nombre: "+this.nombre+", edad: "+this.edad+", peso: "+this.peso;
 	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+
 
 }
